@@ -1,13 +1,26 @@
 {
-  "name": "chat-example",
-  "version": "0.0.0",
-  "description": "A chat example to showcase how to use `socket.io` with a static `express` server with `async` for control flow.",
-  "main": "server.js",
-  "repository": "",
-  "author": "Mostafa Eweda <mo.eweda@gmail.com>",
+  "name": "pong-multiplayer",
+  "version": "1.0.0",
+  "description": "pong multiplayer",
+  "main": "enrutador.js",
   "dependencies": {
-    "async": "~0.2.8",
-    "express": "~3.2.4",
-    "socket.io": "~0.9.14"
-  }
+    "async": "^0.2.10",
+    "express": "^3.2.6",
+    "mongo-db": "^1.0.2",
+    "socket.io": "^0.9.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaZhen/Pong-Multiplayer.git"
+  },
+  "author": "wang zhen ou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaZhen/Pong-Multiplayer/issues"
+  },
+  "homepage": "https://github.com/WaZhen/Pong-Multiplayer#readme"
 }
