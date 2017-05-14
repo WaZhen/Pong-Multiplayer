@@ -13,14 +13,14 @@ app.all('/*', function(req, res, next) {
   next();
 });
 // Tomar lo que tengo en la raiz, y si es la raiz, en ese caso, envio un mensaje
-app.get('/', function (req, res) {
+app.get('/player1', function (req, res) {
 	// MONGO//////////////////////////////
 	
 	
 	MongoClient.connect(url, function(err, db) {
 	  assert.equal(null, err);
 	  console.log("Connected successfully to server");
-	   insertPosiciones(db,req.query['nombre'],req.query['posx'],req.query['posy'],req.query['posz'], function() {
+	   insertPosiciones(db,req.query['nombre'],req.query['posx'],req.query['posy'], function() {
 			db.close();
 		});
 		
@@ -28,7 +28,7 @@ app.get('/', function (req, res) {
 	});
 	
 	// Este es el mensaje que envio
-  res.send('SE he insertado correctamente');
+  res.send('Se ha insertado correctamente');
 });
 
 app.get('/dime', function (req, res) {
@@ -44,7 +44,7 @@ app.get('/dime', function (req, res) {
 		});
 	  //db.close();
 	});
-	//res.send('Te lo digo');
+	res.send('Te lo digo');
 })
 // Arranco el servidor en el puerto 3000
 app.listen(3000, function () {

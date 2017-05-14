@@ -40,7 +40,17 @@ function init() {
                     bats[palo].name = miNombre;
                     jugador.controlled = bats[palo];
                     miInput.controlled = bats[palo];
+                    $.getJSON("http://localhost:3000/player1?nombre="+miNombre+"&posx="+miInput.controlled.x+"&posy="+miInput.controlled.y, function( data ) {
+                        var items = [];
+                        $.each(data, function(key,val) {
+                            items.push("<li id='"+key+"'>"+ val + "</li>");
+                        });
 
+                        $("<ul/>", {
+                            "class":"my-new-list",
+                            html: items.join("")
+                        }).appendTo("#ponmealgo");
+                    });
                 }
                 break;
             }
@@ -50,6 +60,8 @@ function init() {
         }
 
     });
+
+    
 
     temporizador = setTimeout(loop,0);
 
@@ -64,4 +76,18 @@ function loop() {
     clearTimeout(temporizador);
     temporizador = setTimeout(loop, 33);
 
+}
+
+function getOtherPlayersPosition() {
+    $.getJSON("http://localhost:3000/player1?nombre="+miNombre+"&posx="+miInput.controlled.x+"&posy="+miInput.controlled.y, function( data ) {
+        var items = [];
+        $.each(data, function(key,val) {
+            items.push("<li id='"+key+"'>"+ val + "</li>");
+        });
+
+        $("<ul/>", {
+            "class":"my-new-list",
+            html: items.join("")
+        }).appendTo("#ponmealgo");
+    });
 }
