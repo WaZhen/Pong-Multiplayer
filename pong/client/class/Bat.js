@@ -32,6 +32,7 @@ var Bat = function(name, x, y, turn) {
             this.break();
         }
         this.x += scope.speed;
+        this.screenBorderLimit();
     }
 
     this.render = function() {
@@ -63,6 +64,18 @@ var Bat = function(name, x, y, turn) {
             this.speed += this.aceleration;
             return;
         }else{
+            this.speed = 0;
+        }
+    }
+
+    this.screenBorderLimit = function() {
+        if(this.x < 0) {
+            this.x = 0;
+            this.speed = 0;
+        }
+
+        if(this.x + this.width > width) {
+            this.x = width - this.width;
             this.speed = 0;
         }
     }

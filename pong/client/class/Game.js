@@ -25,8 +25,9 @@ function init() {
 
     miInput = new Input();
     miInput.listen();
-    bats.push(new Bat("default", width/2 , height - 20, false));
-    bats.push(new Bat("default", width/2 , 10, true));
+    bats.push(new Bat("default", width/2 , height - 30, false));
+    bats.push(new Bat("default", width/2 , 20, true));
+    pelota = new Ball(width/2, height/2);
 
     $("#botonJugar").on('click',function() {
 
@@ -58,6 +59,8 @@ function loop() {
 
     ctx.clearRect(0, 0, width, height);
     updateBats();
+    pelota.update();
+    pelota.render();
     clearTimeout(temporizador);
     temporizador = setTimeout(loop, 33);
 
