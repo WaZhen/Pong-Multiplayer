@@ -1,0 +1,17 @@
+#contenedor{
+    position:absolute;
+    top:0px;
+    left:0px;
+    border: 1px solid red;
+    width:512px;
+    height:512px;
+}
+#contieneMenu{
+    position:absolute;
+    top:0px;
+    left:0px;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
