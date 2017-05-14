@@ -1,0 +1,19 @@
+{
+  "name": "pong",
+  "version": "1.0.0",
+  "description": "multiplayer online pong",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaZhen/Pong-Multiplayer.git"
+  },
+  "author": "Wang Zhen Ou",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/WaZhen/Pong-Multiplayer/issues"
+  },
+  "homepage": "https://github.com/WaZhen/Pong-Multiplayer#readme"
+}
