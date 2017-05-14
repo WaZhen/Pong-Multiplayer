@@ -1,7 +1,6 @@
-var Player = function(name, x, y) {
+var Player = function(name) {
 
-    this.x = x;
-    this.y = y;
     this.name = name;
+    this.controlled = null;
 
 }
